@@ -1,0 +1,27 @@
+body {
+    background-color: #cbcbcb;
+}
+
+.notes-list {
+    margin: 50px;
+    list-style-type: none;
+}
+
+.notes-element {
+    border: 1px solid #333;
+    padding: 0 20px;
+    margin-bottom: 20px;
+    font-family: "Courier New";
+    background-color: #dbdbdb;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.note-title {
+    font-size: 24px;
+    color: #111;
+}
+
+.note-content {
+    font-size: 18px;
+    font-style: italic;
+}
