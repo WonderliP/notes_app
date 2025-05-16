@@ -21,7 +21,12 @@ body {
     color: #111;
 }
 
+.note-title span {
+    font-size: 18px;
+}
+
 .note-content {
     font-size: 18px;
     font-style: italic;
 }
+

@@ -11,8 +11,11 @@
 <ul class="notes-list">
     {% for note in notes %}
     <li class="notes-element">
-        <h3 class="note-title">{{ note.title }}</h3>
-        <p class="note-content">{{ note.content }}</p>
+        {% if note.reminder %}
+            <p>⏰ {{ note.reminder }}</p>
+        {% endif %}
+        <p class="note-title"><span>(❗{{ note.category.title }})</span> <strong>{{ note.title }}</strong></p>
+        <p class="note-content">{{ note.text }}</p>
     </li>
     {% endfor %}
 </ul>
