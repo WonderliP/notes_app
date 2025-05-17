@@ -1,0 +1,9 @@
+{% for note in notes %}
+<p>Назва: {{ note.title }} | Опис: {{ note.text }}</p>
+{% endfor %}
+
+<form>
+    <input type="text" name="category" placeholder="Фільтр за категорією">
+    <input type="text" name="search" placeholder="Пошук за заголовком">
+    <button type="submit">Шукати</button>
+</form>
