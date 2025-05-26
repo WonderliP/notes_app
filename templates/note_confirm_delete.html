@@ -1,5 +1,13 @@
-<form method="post">
-    {% csrf_token %}
-    <p>Ви впевнені, що хочете видалити {{ note }}?</p>
-    <button type="submit">Так, видалити</button>
-</form>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Видалення нотатки</h2>
+    <p>Ви впевнені, що хочете видалити нотатку "{{ object.title }}"</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">Так, видалити</button>
+        <a href="{% url 'note_detail' object.pk %}" class="btn btn-primary">Скасувати</a>
+    </form>
+</div>
+{% endblock %}

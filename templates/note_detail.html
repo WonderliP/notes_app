@@ -1,3 +1,16 @@
-<p>{{ note.title }} {{ note.text }} ({{ note.reminder }}) {{ note.category }}</p>
-<a href="{% url 'note_update' note.pk %}">Редагувати</a>
-<a href="{% url 'note_delete' note.pk %}">Видалити</a>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>{{ note.title }}</h2>
+    <div class="book_details">
+        <p><strong>Категорія:</strong>{{ note.category }}</p>
+        <p><strong>Дата виконання:</strong>{{ note.reminder }}</p>
+        <p><strong>Вміст:</strong>{{ note.text }}</p>
+    </div>
+</div>
+<div class="actions">
+    <a href="{% url 'note_update' note.pk %}" class="btn btn-primary">Редагувати</a>
+    <a href="{% url 'note_delete' note.pk %}" class="btn btn-primary">Видалити</a>
+</div>
+{% endblock %}
