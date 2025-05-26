@@ -14,7 +14,7 @@ def greeting(request):
 
 def create_notes(request):
     notes = Note.objects.all()
-    return render(request, "index.html", {"notes": notes})
+    return render(request, "note_list.html", {"notes": notes})
 
 
 class NoteCreateView(CreateView):
@@ -27,6 +27,7 @@ class NoteCreateView(CreateView):
 class NoteDetailView(DetailView):
     model = Note
     template_name = "note_detail.html"
+    context_object_name = "note"
 
 
 class NoteUpdateView(UpdateView):
